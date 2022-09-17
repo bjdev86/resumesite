@@ -10,14 +10,17 @@ menu:
   main:
       - Name: "Home"
         URL: "/"
+        Weight: 0
 
       - Name: "Projects"
         URL: "/"
+        Weight: 1
 
       - Name: "Hobbies"
         URL: "/"
+        Weight: 2
 
       - Name: "Special Skills"
         URL: "/"
-
+        Weight: 3
 ---

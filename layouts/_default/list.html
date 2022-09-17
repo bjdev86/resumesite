@@ -8,9 +8,11 @@
       <nav class="main"></nav>
         <!-- Make the links into a list -->
         <dl>
-          {{ range .Site.Menus.main }}
-            <dt>
-              <a class="item" href="{{.URL}}">{{.Name}} </a>
+          {{ range sort .Site.Menus.main ".Weight"  }}
+            <dt class="item">
+
+              <a href="{{.URL}}"> {{.Name}} </a>
+            
             </dt>
           {{ end }}
         </dl>
