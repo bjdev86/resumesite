@@ -1,0 +1,12 @@
+<!-- Header shared code amongst all templates -->
+{{ block "header" . }} The header 
+<!-- Vertical navigation. !TODO -->
+<nav class="main-nav">
+    
+    {{range .Site.Menus.main}}
+
+    <ul> <a href="{{.URL}}"> {{ .Name }}</a> </ul>
+    
+    {{end}}
+</nav>
+{{ end }}
