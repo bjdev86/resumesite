@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Default title -->
+    <title>
+        {{ block "title" . }}
+          {{ .Page.Title }}
+        {{ end }}
+    </title>
+</head>
+
+<body>
+    <!-- Header shared code amongst all templates -->
+    <div> The header 
+        <!-- Vertical navigation. !TODO -->
+        <nav style="background-color: aquamarine;">
+            
+            {{range .Site.Menus.main}}
+
+            <ul> <a href="{{.URL}}"> {{ .Name }}</a> </ul>
+            
+            {{end}}
+        </nav>
+    </div>
+    {{ block "master" . }}
+      <!-- The area that children templates will render in. -->
+        
+    {{end}}
+
+    {{ block "footer" . }}
+        <!-- Shared footer code -->
+        <p> The footer </p>
+    {{ end }}
+    
+</body>
+</html>

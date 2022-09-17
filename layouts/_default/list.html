@@ -1,0 +1,8 @@
+{{ define "master" }}
+    This is the list template 
+    <nav>
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+    </nav>
+{{end}}
