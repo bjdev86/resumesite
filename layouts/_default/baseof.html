@@ -19,10 +19,8 @@
 
 <body>    
     <!-- The area that children templates will render in. -->
-    {{ block "main-content" . }} {{ end }}
-
-    <!-- Import partial footer template -->
-    {{ partial "footer/site-footer.html" . }}
-    
+    {{ block "main-content" . }} {{ end }}    
 </body>
+<!-- Import partial footer template -->
+{{ partial "footer/site-footer.html" . }}
 </html>

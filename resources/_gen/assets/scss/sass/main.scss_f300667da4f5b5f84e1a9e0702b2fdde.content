@@ -1,4 +1,12 @@
+/* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
+ * favor of '@use' */
+.main-content {
+  background-color: white; }
+
+.site-nav {
+  background-color: darkgreen; }
+
 .root-grid-container {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 10% 90%;
   grid-template-rows: 100%; }

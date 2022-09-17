@@ -4,7 +4,18 @@
     
     <!-- Main Menu -->
     <div class="site-nav">
-      This is the list template
+
+      <nav class="main"></nav>
+        <!-- Make the links into a list -->
+        <dl>
+          {{ range .Site.Menus.main }}
+            <dt>
+              <a class="item" href="{{.URL}}">{{.Name}} </a>
+            </dt>
+          {{ end }}
+        </dl>
+      </nav>
+
     </div>
 
     <!-- Content -->
