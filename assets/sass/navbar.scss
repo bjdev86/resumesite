@@ -1,5 +1,15 @@
-
+// Main navigation bar div
 .site-nav 
 {
-    background-color: darkgreen;
+    // Nav elem itself
+    .main
+    {
+        background-color: darkgreen;
+
+        // Individual Link 
+        .item
+        {
+           color: yellow;           
+        }
+    }
 }

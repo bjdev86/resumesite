@@ -3,8 +3,10 @@
 .main-content {
   background-color: white; }
 
-.site-nav {
+.site-nav .main {
   background-color: darkgreen; }
+  .site-nav .main .item {
+    color: yellow; }
 
 .root-grid-container {
   display: grid;

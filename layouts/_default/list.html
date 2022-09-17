@@ -5,13 +5,13 @@
     <!-- Main Menu -->
     <div class="site-nav">
 
-      <nav class="main"></nav>
+      <nav class="main">
         <!-- Make the links into a list -->
         <dl>
-          {{ range sort .Site.Menus.main ".Weight"  }}
-            <dt class="item">
+          {{ range sort .Site.Menus.main "Weight" }}
+            <dt>
 
-              <a href="{{.URL}}"> {{.Name}} </a>
+              <a class="item" href="{{.URL}}"> {{.Name}} </a>
             
             </dt>
           {{ end }}
