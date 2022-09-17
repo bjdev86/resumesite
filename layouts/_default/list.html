@@ -1,8 +1,15 @@
-{{ define "master" }}
-    This is the list template 
-    <nav>
-        {{ range .Site.Menus.main }}
-          <a href="{{ .URL }}">{{ .Name }}</a>
-        {{ end }}
-    </nav>
+{{ define "main-content" }}
+  <!-- The Root div where all the content of this page will be placed-->
+  <div class="root-grid-container">
+    
+    <!-- Main Menu -->
+    <div class="site-nav">
+      This is the list template
+    </div>
+
+    <!-- Content -->
+    <div class="main-content">
+
+    </div>
+  </div> 
 {{end}}
