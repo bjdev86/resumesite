@@ -10,10 +10,14 @@ menu:
   main:
       - Name: "Home"
         URL: "/"
+
       - Name: "Projects"
         URL: "/"
+
       - Name: "Hobbies"
         URL: "/"
+
       - Name: "Special Skills"
         URL: "/"
+
 ---

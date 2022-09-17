@@ -2,6 +2,6 @@
 baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'Meet Ben Miller'
-theme: 'ananke'
-themeDir: 'themes/ananke'
+#theme: 'ananke'
+#themeDir: 'themes/ananke'
 ---
