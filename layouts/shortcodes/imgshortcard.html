@@ -2,16 +2,57 @@
 <!-- Container to hold a brief amount of content for display. Allows for left 
     hand margin content as well. -->
  <div class="shortcard">
-   <!-- Right Content expected to be an image in this context. -->
+   
+    <!-- Right Content expected to be an image in this context. -->
    <div class="shortcard-left">
-    {{ with .Get "image" }} 
-      {{$image := .}}
+    
+    <!-- Capture the image partial path passed-->
+    {{ $imgPath := .Get "imgPath" }}
+     
+    <!-- Local Variable Declaration -->
+    {{ $imgHeight := .Get "picHeight" }}
+    {{ $imgWidth := .Get "picWidth" }}
 
+    <!-- See if imgHeight passed -->
+    {{ if $imgHeight }} 
+      {{ $.Scratch.Set "imgHeight" $imgHeight }}
+    {{ else }}
+      {{ $.Scratch.Set "imgHeight" "100px" }}
+    {{ end }}
+
+    <!-- See if the imgWidth was passed -->
+    {{ if $imgWidth }} 
+      {{ $.Scratch.Set "imgWidth" $imgWidth }} 
+    {{ else }}
+       {{ $.Scratch.Set "imgWidth" "150px" }}
+    {{ end }}
+
+    <!-- Make sure there was a partial path passed -->
+    {{ if $imgPath }} 
+      
+      <!-- Prepend directory wildcard to include dir tree in search -->
+      {{ $imgPath := $imgPath | printf "%s%s" "**/" }}
+        
+      <!-- Search for the image in the global resources (assets/) -->
+      {{ with resources.GetMatch $imgPath }} 
+
+        <!-- Load the image and force it a specific size -->
+         <img src="{{.Permalink}}" width= {{ $.Scratch.Get "imgWidth" }} 
+              height={{ $.Scratch.Get "imgHeight" }}>
+      
+      {{else}}
+
+        <!-- If the image is not found let the user know -->
+        <img src="/" width={{ $.Scratch.Get "imgWidth" }} 
+             height={{ $.Scratch.Get "imgHeight" }} title="Image Not Found">
+
+      {{ end }}
     {{ end }}
    </div>
 
     <!-- Main content cell -->
     <div class="shortcard-main">
+        
         <h2>
             {{with .Get "heading"}} {{.}} {{ end }}
         </h2>
@@ -23,13 +64,12 @@
         <!-- Main content -->
         <p> {{ .Inner }} </p>
 
-         <!-- Add link if ref passed-->
-         {{$link := .Get "detailslink" | safeURL}}
-         {{ if $link }}        
-           
-           <a href = "{{ $link }}" > Read On... </a> <br>
- 
-         {{ end }}
+        <!-- Add link to details page if ref was passed -->
+        {{$link := .Get "detailslink" | safeURL}}
+
+        {{ if $link }}
+          <a href = "{{ $link }}" > Read On... </a> 
+        {{ end }}
 
     </div>
 

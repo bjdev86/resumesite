@@ -2,8 +2,6 @@
 baseURL: 'http://example.org/'
 languageCode: 'en-us'
 title: 'Meet Ben Miller'
-#theme: 'personal-web'
-#themeDir: '/home/ben/WebDev/mysite/html/example/themes/personal-web'
 
 # Main menu
 menu:
