@@ -6,7 +6,39 @@
     color: yellow; }
 
 .shortcard {
-  display: flex; }
+  display: grid;
+  grid-template-columns: minmax(0, max-content) minmax(0, max-content) minmax(0, max-content);
+  justify-content: space-between;
+  align-content: flex-start;
+  gap: 10px 10px;
+  /* .shortcard-left
+    {
+    }
+
+    .shortcard-main
+    {
+       
+    }
+
+    .shortcard-right
+    {
+        
+    } */ }
+
+.imgshortcard-grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: flex-start; }
+  .imgshortcard-grid .imgshortcard-left {
+    flex-grow: 1;
+    order: 0; }
+  .imgshortcard-grid .imgshortcard-main {
+    flex-grow: 30;
+    order: 1; }
+  .imgshortcard-grid .imgshortcard-right {
+    flex-grow: 1;
+    order: 2; }
 
 .main-content {
   background-color: white; }
@@ -27,7 +59,8 @@ h1 {
 
 h2 {
   font-famliy: Arial, Helvetica, sans-serif;
-  color: gray; }
+  color: gray;
+  margin-top: 0px; }
 
 h3 {
   color: blue; }

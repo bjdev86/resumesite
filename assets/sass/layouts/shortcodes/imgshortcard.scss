@@ -1,0 +1,26 @@
+.imgshortcard-grid
+{
+    display: flex;
+    flex: { flow: row wrap; }
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .imgshortcard-left
+    {
+        flex-grow: 1;
+        order: 0;
+    }
+
+    .imgshortcard-main
+    {
+        flex-grow: 30;
+        order: 1;
+       
+    }
+
+    .imgshortcard-right
+    {
+        flex-grow: 1;
+        order: 2;
+    }
+}

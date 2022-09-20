@@ -1,10 +1,13 @@
 # Experience
 
-Experience 
+Experience  
 
+hi
 
-{{< imgshortcard title = "Heading" subTitle = "subheading" lftMrgnCnt = "June 4, 2012" 
-    imgPath = "gallryproj.jpg"  >}}
+{{< shortcard title = "Company" subTitle = "Job Title" rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" detailsLink = "details/"  >}}
     
-    <strong> This </strong> is my first shortcard, what do I <i> think? </i>
-{{< /imgshortcard >}}
+   This is my first shortcard, what do I  think?  
+   hi
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit   anim id est laborum.
+
+{{< /shortcard >}}

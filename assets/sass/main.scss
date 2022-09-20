@@ -1,7 +1,8 @@
 /* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
  * favor of '@use' */
 @import 'navbar';
-@import 'layouts/shortcodes/shortcodes';
+@import 'layouts/shortcodes/shortcard';
+@import 'layouts/shortcodes/imgshortcard';
 @import 'layouts/singlepages';
 @import 'layouts/listpages';
 @import 'schemes';
@@ -41,6 +42,7 @@ h2
 {
     @include headingDef;
     color: gray;
+    margin-top: 0px;
 }
 
 h3

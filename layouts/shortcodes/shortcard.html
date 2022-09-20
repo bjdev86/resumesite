@@ -4,35 +4,35 @@
  <div class="shortcard">
    <!-- Right Content -->
    <div class="shortcard-left">
-    {{ with .Get "rightMargin" }} {{.}} {{ end }}
+    {{ with .Get "lftMrgnCnt" }} {{.}} {{ end }}
    </div>
 
     <!-- Main content cell -->
     <div class="shortcard-main">
         <h2>
-            {{with .Get "heading"}} {{.}} {{ end }}
+            {{with .Get "title"}} {{.}} {{ end }}
         </h2>
 
         <h3>
-            {{with .Get "subheading"}} {{.}} {{ end }}
+            {{with .Get "subTitle"}} {{.}} {{ end }}
         </h3>
 
         <!-- Main content -->
-        <p> {{ .Inner }} </p>
+         {{ .Inner }} 
 
         <!-- Add link if ref passed-->
-        {{$link := .Get "detailslink" | safeURL}}
+        {{$link := .Get "detailsLink" | safeURL}}
         {{ if $link }}        
           
-          <a href = "{{ $link }}" > Read On... </a> <br>
+        </br></br><a href = "{{ $link }}" > Read On... </a> 
 
         {{ end }}
     </div>
 
     <!-- Left hand margin content -->
-   <div class="shortcard-left">
+   <div class="shortcard-right">
 
-      <p> {{with .Get "leftMargin" }} {{.}} {{ end }} </p>
+      {{with .Get "rghtMrgnCnt" }} {{.}} {{ end }} 
     
     </div>
 </div>

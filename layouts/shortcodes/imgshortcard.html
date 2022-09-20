@@ -1,10 +1,10 @@
 
 <!-- Container to hold a brief amount of content for display. Allows for left 
     hand margin content as well. -->
- <div class="shortcard">
+ <div class="imgshortcard-grid">
    
     <!-- Right Content expected to be an image in this context. -->
-   <div class="shortcard-left">
+   <div class="imgshortcard-left">
     
     <!-- Capture the image partial path passed-->
     {{ $imgPath := .Get "imgPath" }}
@@ -51,7 +51,7 @@
    </div>
 
     <!-- Main content cell -->
-    <div class="shortcard-main">
+    <div class="imgshortcard-main">
         
         <h2>
             {{with .Get "title"}} {{.}} {{ end }}
@@ -74,7 +74,7 @@
     </div>
 
     <!-- Left hand margin content -->
-   <div class="shortcard-left">
+   <div class="imgshortcard-right">
 
       <p> {{with .Get "lftMrgnCnt" }} {{.}} {{ end }} </p>
     
