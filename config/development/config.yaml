@@ -9,18 +9,20 @@ title: 'Meet Ben Miller'
 menu:
   main:
       - Name: "Home"
-        URL: "/"
+        URL: "#home"
         Weight: 0
+        identifier: "home"
 
       - Name: "Projects"
-        URL: "/"
+        URL: "#projects"
         Weight: 1
+        identifier: "projects"
 
       - Name: "Hobbies"
-        URL: "/"
+        URL: "#hobbies"
         Weight: 2
 
       - Name: "Special Skills"
-        URL: "/"
+        URL: "#specialskills"
         Weight: 3
 ---

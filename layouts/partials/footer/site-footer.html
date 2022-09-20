@@ -1,4 +1,9 @@
 <!-- Site-wide footer -->
 <footer>
   <p> The footer </p>
+   
+    {{with .Site.GetPage "/layouts/partials/footer/footer.md"}} 
+    {{ .Title }}
+    {{ end }}
+  
 </footer>

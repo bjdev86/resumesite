@@ -1,7 +1,20 @@
 /* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
  * favor of '@use' */
-@import 'content';
 @import 'navbar';
+@import 'layouts/shortcodes/shortcodes';
+@import 'layouts/singlepages';
+@import 'layouts/listpages';
+@import 'schemes';
+
+/********************************** Site wide Mixins **************************/
+@mixin headingDef 
+{
+    font: 
+    {
+        famliy: $font-family;
+    }
+}
+/******************************************************************************/
 
 // Main navigation styling
 .root-grid-container
@@ -9,4 +22,35 @@
     display: grid;
     grid-template-columns: 10% 90%;
     grid-template-rows: 100%;
+}
+
+.main-content
+{
+    color: auto;
+}
+
+// Headings
+h1
+{
+    @include headingDef;
+    color: darkgreen;
+    
+}
+
+h2
+{
+    @include headingDef;
+    color: gray;
+}
+
+h3
+{
+    color: blue;
+}
+
+// All paragraphs
+p
+{
+    font-family: $font-family;
+    color: rgb(172, 172, 172);
 }

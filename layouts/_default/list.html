@@ -11,7 +11,7 @@
           {{ range sort .Site.Menus.main "Weight" }}
             <dt>
 
-              <a class="item" href="{{.URL}}"> {{.Name}} </a>
+              <a class="item" href="#{{.Weight }}"> {{.Name}} </a>
             
             </dt>
           {{ end }}
@@ -20,9 +20,12 @@
 
     </div>
 
-    <!-- Content -->
+    <!-- Main Content -->
     <div class="main-content">
 
+      {{ range .RegularPages}}  
+        {{ .Content }}
+      {{ end }}  
     </div>
   </div> 
 {{end}}

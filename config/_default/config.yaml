@@ -4,4 +4,7 @@ languageCode: 'en-us'
 title: 'Meet Ben Miller'
 #theme: 'ananke'
 #themeDir: 'themes/ananke'
+resources:
+        -src: "content/projects/index.md"
+        
 ---

@@ -1,0 +1,38 @@
+
+<!-- Container to hold a brief amount of content for display. Allows for left 
+    hand margin content as well. -->
+ <div class="shortcard">
+   <!-- Right Content -->
+   <div class="shortcard-left">
+    {{ with .Get "rightMargin" }} {{.}} {{ end }}
+   </div>
+
+    <!-- Main content cell -->
+    <div class="shortcard-main">
+        <h2>
+            {{with .Get "heading"}} {{.}} {{ end }}
+        </h2>
+
+        <h3>
+            {{with .Get "subheading"}} {{.}} {{ end }}
+        </h3>
+
+        <!-- Main content -->
+        <p> {{ .Inner }} </p>
+
+        <!-- Add link if ref passed-->
+        {{$link := .Get "detailslink" | safeURL}}
+        {{ if $link }}        
+          
+          <a href = "{{ $link }}" > Read On... </a> <br>
+
+        {{ end }}
+    </div>
+
+    <!-- Left hand margin content -->
+   <div class="shortcard-left">
+
+      <p> {{with .Get "leftMargin" }} {{.}} {{ end }} </p>
+    
+    </div>
+</div>
