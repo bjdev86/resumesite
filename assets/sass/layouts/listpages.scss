@@ -3,3 +3,12 @@
 {
     background-color: white;
 }
+
+// Main navigation styling
+.root-grid-container
+{
+    display: grid;
+    grid-template-columns: 10% 90%;
+    grid-template-rows: 100%;
+    align-content: stretch;
+}

@@ -3,7 +3,13 @@
     hand margin content as well. -->
  <div class="imgshortcard-grid">
    
-    <!-- Right Content expected to be an image in this context. -->
+   <div class="title">
+    <h2>
+      {{with .Get "title"}} {{.}} {{ end }}
+    </h2> 
+  </div>
+    
+   <!-- Right Content expected to be an image in this context. -->
    <div class="imgshortcard-left">
     
     <!-- Capture the image partial path passed-->
@@ -53,30 +59,29 @@
     <!-- Main content cell -->
     <div class="imgshortcard-main">
         
-        <h2>
-            {{with .Get "title"}} {{.}} {{ end }}
-        </h2>
-
-        <h3>
-            {{with .Get "subTitle"}} {{.}} {{ end }}
-        </h3>
+        
+            {{with .Get "subTitle"}} 
+            <h3> {{.}} </h3>
+            {{ end }}
+        
 
         <!-- Main content -->
         <p> {{ .Inner }} </p>
 
         <!-- Add link to details page if ref was passed -->
-        {{$link := .Get "detailslink" | safeURL}}
+        {{$link := .Get "detailsLink" | safeURL}}
 
         {{ if $link }}
-          <a href = "{{ $link }}" > Read On... </a> 
+          
+          </br><a href = "{{ $link }}" > Read On... </a></br></br>
+        
         {{ end }}
-
     </div>
 
     <!-- Left hand margin content -->
    <div class="imgshortcard-right">
 
-      <p> {{with .Get "lftMrgnCnt" }} {{.}} {{ end }} </p>
+      <p> {{with .Get "rghtMrgnCnt" }} {{.}} {{ end }} </p>
     
     </div>
 </div>

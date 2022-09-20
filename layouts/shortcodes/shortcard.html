@@ -2,6 +2,13 @@
 <!-- Container to hold a brief amount of content for display. Allows for left 
     hand margin content as well. -->
  <div class="shortcard">
+    <!-- Title Row -->
+   <div class="shortcard-title">
+     <h2>
+       {{with .Get "title"}} {{.}} {{ end }}
+     </h2>
+   </div> 
+
    <!-- Right Content -->
    <div class="shortcard-left">
     {{ with .Get "lftMrgnCnt" }} {{.}} {{ end }}
@@ -9,22 +16,19 @@
 
     <!-- Main content cell -->
     <div class="shortcard-main">
-        <h2>
-            {{with .Get "title"}} {{.}} {{ end }}
-        </h2>
-
-        <h3>
-            {{with .Get "subTitle"}} {{.}} {{ end }}
-        </h3>
-
+    
+        {{with .Get "subTitle"}} 
+          <h3> {{.}} </h3>
+        {{ end }}
+        
         <!-- Main content -->
-         {{ .Inner }} 
+         <p> {{ .Inner }} </p> 
 
         <!-- Add link if ref passed-->
-        {{$link := .Get "detailsLink" | safeURL}}
+        {{ $link := .Get "detailsLink" | safeURL }}
         {{ if $link }}        
           
-        </br></br><a href = "{{ $link }}" > Read On... </a> 
+        </br><a href = "{{ $link }}" > Read On... </a></br></br>
 
         {{ end }}
     </div>
@@ -32,7 +36,7 @@
     <!-- Left hand margin content -->
    <div class="shortcard-right">
 
-      {{with .Get "rghtMrgnCnt" }} {{.}} {{ end }} 
+      {{with .Get "rghtMrgnCnt" }} <p> {{.}} </p> {{ end }} 
     
     </div>
 </div>

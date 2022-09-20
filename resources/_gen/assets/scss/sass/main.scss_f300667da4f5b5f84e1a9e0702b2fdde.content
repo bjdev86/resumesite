@@ -1,57 +1,78 @@
 /* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
  * favor of '@use' */
-.site-nav .main {
-  background-color: darkgreen; }
-  .site-nav .main .item {
-    color: yellow; }
+.side-bar {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: darkgreen;
+  padding-top: 20px; }
+  .side-bar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    color: yellow;
+    text-align: center; }
+  .side-bar .side-bar-links {
+    margin: 0;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
 
 .shortcard {
   display: grid;
-  grid-template-columns: minmax(0, max-content) minmax(0, max-content) minmax(0, max-content);
-  justify-content: space-between;
-  align-content: flex-start;
-  gap: 10px 10px;
-  /* .shortcard-left
-    {
-    }
-
-    .shortcard-main
-    {
-       
-    }
-
-    .shortcard-right
-    {
-        
-    } */ }
+  grid-template-columns: repeat 3, minmax(0, max-content);
+  grid-template-areas: "hrd hrd hrd" "lft cntr rght";
+  column-gap: 10px;
+  align-content: start;
+  justify-content: start; }
+  .shortcard .shortcard-title {
+    grid-area: hrd; }
+  .shortcard .shortcard-left {
+    grid-area: lft; }
+  .shortcard .shortcard-main {
+    grid-area: cntr; }
+  .shortcard .shortcard-right {
+    grid-area: rght; }
 
 .imgshortcard-grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-items: flex-start; }
+  display: grid;
+  grid-template-columns: repeat 3, minmax(0, max-content);
+  grid-template-areas: "hrd hrd hrd" "lft cntr rght";
+  column-gap: 10px;
+  align-content: start;
+  justify-content: start; }
+  .imgshortcard-grid .title {
+    grid-area: hrd; }
   .imgshortcard-grid .imgshortcard-left {
-    flex-grow: 1;
-    order: 0; }
+    grid-area: lft; }
   .imgshortcard-grid .imgshortcard-main {
-    flex-grow: 30;
-    order: 1; }
+    grid-area: cntr; }
   .imgshortcard-grid .imgshortcard-right {
-    flex-grow: 1;
-    order: 2; }
+    grid-area: rght; }
 
 .main-content {
   background-color: white; }
 
-/********************************** Site wide Mixins **************************/
-/******************************************************************************/
 .root-grid-container {
   display: grid;
   grid-template-columns: 10% 90%;
-  grid-template-rows: 100%; }
+  grid-template-rows: 100%;
+  align-content: stretch; }
 
+/********************************** Site wide Mixins **************************/
+/******************************************************************************/
 .main-content {
-  color: auto; }
+  margin-left: 260px;
+  padding: 0px 10px; }
 
 h1 {
   font-famliy: Arial, Helvetica, sans-serif;
@@ -63,8 +84,11 @@ h2 {
   margin-top: 0px; }
 
 h3 {
-  color: blue; }
+  font-famliy: Arial, Helvetica, sans-serif;
+  color: blue;
+  margin-top: 0 px; }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
-  color: #acacac; }
+  color: #acacac;
+  margin-top: 0px; }

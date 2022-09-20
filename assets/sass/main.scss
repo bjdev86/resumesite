@@ -17,17 +17,12 @@
 }
 /******************************************************************************/
 
-// Main navigation styling
-.root-grid-container
-{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 100%;
-}
+
 
 .main-content
 {
-    color: auto;
+    margin-left: 260px;
+    padding: 0px 10px;
 }
 
 // Headings
@@ -47,7 +42,9 @@ h2
 
 h3
 {
+    @include headingDef;
     color: blue;
+    margin-top: 0 px;
 }
 
 // All paragraphs
@@ -55,4 +52,5 @@ p
 {
     font-family: $font-family;
     color: rgb(172, 172, 172);
+    margin-top: 0px;
 }

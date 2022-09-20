@@ -1,26 +1,33 @@
 .imgshortcard-grid
 {
-    display: flex;
-    flex: { flow: row wrap; }
-    justify-content: flex-end;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: repeat (3, minmax(0, max-content));
+    //grid-template-rows: repeat(2, auto);
+    grid-template-areas:
+        "hrd hrd hrd"
+        "lft cntr rght";
+    column-gap: 10px;
+    align-content: start;
+    justify-content: start;
+    
+    .title
+    {
+        grid-area: hrd;
+    }
 
     .imgshortcard-left
     {
-        flex-grow: 1;
-        order: 0;
+        grid-area: lft;
     }
 
     .imgshortcard-main
     {
-        flex-grow: 30;
-        order: 1;
+        grid-area: cntr;
        
     }
 
     .imgshortcard-right
     {
-        flex-grow: 1;
-        order: 2;
+        grid-area: rght;
     }
 }

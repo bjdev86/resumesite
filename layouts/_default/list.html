@@ -1,31 +1,35 @@
 {{ define "main-content" }}
-  <!-- The Root div where all the content of this page will be placed-->
-  <div class="root-grid-container">
-    
-    <!-- Main Menu -->
-    <div class="site-nav">
+<!-- Main Menu -->
+<div class="side-bar">
+  <div class="side-bar-links">
+  {{ range sort .Site.Menus.main "Weight" }}
 
-      <nav class="main">
-        <!-- Make the links into a list -->
-        <dl>
-          {{ range sort .Site.Menus.main "Weight" }}
-            <dt>
+    <a href="#{{.Weight }}"> {{.Name}} </a>
 
-              <a class="item" href="#{{.Weight }}"> {{.Name}} </a>
-            
-            </dt>
-          {{ end }}
-        </dl>
-      </nav>
+  {{ end }}
+  </div>
+</div>
 
-    </div>
+<!-- Main Content -->
+<div class="main-content">
 
-    <!-- Main Content -->
-    <div class="main-content">
+  <!-- Print out the content for the homepage (main _index.md) -->
+  {{.Content}}
 
-      {{ range .RegularPages}}  
-        {{ .Content }}
-      {{ end }}  
-    </div>
-  </div> 
+  <!-- Iterate through all the index pages (markdown files) that are located 
+       next to this _index.md file.-->
+  {{ range $page := .Pages }}
+    {{ with .File }}
+  
+    <!-- If the page (markdown file) iterated is at the root add it's contents 
+         to the page (ignore all other pages) -->
+      {{ if eq .Dir "/" }}
+        {{ $page.Content }}
+      
+      {{end}}
+    {{end}}  
+  {{end}}  
+
+</div>
+
 {{end}}
