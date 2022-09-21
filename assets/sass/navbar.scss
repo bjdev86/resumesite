@@ -1,10 +1,13 @@
 @import 'schemes';
 
+// Constants 
+$sideBarWidth: 260px; 
+
 // Main navigation side bar
 .side-bar 
 {
     height: 100%;
-    width: 260px;
+    width: $sideBarWidth;
     position: fixed;
     z-index: 0; // Stay on top
     top: 0; 

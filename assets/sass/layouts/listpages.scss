@@ -1,29 +1,19 @@
+@import '../navbar';
 
 // Main content on list page template
-.main-content
+.list-main-content
 {
-    background-color: white;
+    // Used to offset main content to the left away from menu
+    margin-left: $sideBarWidth;
+    padding: 0px 10px;
 
     section.home-content
     {
-        border: 
-        {
-            style: solid none none none;
-            width: thin;
-        }
-    }
-    section.first
-    {
-        style: none none solid none;
+      border: 
+      {
+        style: solid none none none;
         width: thin;
+      }
     }
 }
 
-// Main navigation styling
-.root-grid-container
-{
-    display: grid;
-    grid-template-columns: 10% 90%;
-    grid-template-rows: 100%;
-    align-content: stretch;
-}
