@@ -1,7 +1,22 @@
 
+// Main content on list page template
 .main-content
 {
     background-color: white;
+
+    section.home-content
+    {
+        border: 
+        {
+            style: solid none none none;
+            width: thin;
+        }
+    }
+    section.first
+    {
+        style: none none solid none;
+        width: thin;
+    }
 }
 
 // Main navigation styling

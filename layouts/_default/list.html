@@ -13,19 +13,25 @@
 <!-- Main Content -->
 <div class="main-content">
 
-  <!-- Print out the content for the homepage (main _index.md) -->
-  {{.Content}}
+  <section class="first">
+    <!-- Print out the content for the homepage (main _index.md) -->
+    {{.Content}}
+  </section>
 
   <!-- Iterate through all the index pages (markdown files) that are located 
        next to this _index.md file.-->
   {{ range $page := .Pages }}
+    
     {{ with .File }}
-  
+
     <!-- If the page (markdown file) iterated is at the root add it's contents 
          to the page (ignore all other pages) -->
       {{ if eq .Dir "/" }}
-        {{ $page.Content }}
-      
+        <section class="home-content">
+          
+          {{ $page.Content }}
+
+        </section>
       {{end}}
     {{end}}  
   {{end}}  

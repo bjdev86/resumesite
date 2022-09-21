@@ -61,6 +61,12 @@
 
 .main-content {
   background-color: white; }
+  .main-content section.home-content {
+    border-style: solid none none none;
+    border-width: thin; }
+  .main-content section.first {
+    style: none none solid none;
+    width: thin; }
 
 .root-grid-container {
   display: grid;
