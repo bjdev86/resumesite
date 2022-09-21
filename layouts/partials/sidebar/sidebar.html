@@ -1,0 +1,10 @@
+<!-- Main Menu -->
+<div class="side-bar">
+    <div class="side-bar-links">
+    {{ range sort .Site.Menus.main "Weight" }}
+      
+      <a href="/{{.URL}}"> {{.Name}} </a>
+  
+    {{ end }}
+    </div>
+  </div>

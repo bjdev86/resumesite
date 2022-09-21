@@ -1,0 +1,29 @@
+/********************************** Site wide Mixins **************************/
+@mixin headingDef 
+{
+    font: 
+    {
+        famliy: $font-family;
+    }
+}
+
+@mixin maincontent
+{
+    // Used to offset main content to the left away from menu
+    margin-left: $sideBarWidth;
+    padding: 0px 10px;
+
+    section.home-content
+    {
+      border: 
+      {
+        style: solid none none none;
+        width: thin;
+      }
+    }
+}
+/******************************************************************************/
+
+/********************************* Site wide Variables ************************/
+$sideBarWidth: 260px; 
+/******************************************************************************/

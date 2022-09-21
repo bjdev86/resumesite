@@ -1,19 +1,7 @@
-@import '../navbar';
+@import '../sitewide';
 
 // Main content on list page template
 .list-main-content
 {
-    // Used to offset main content to the left away from menu
-    margin-left: $sideBarWidth;
-    padding: 0px 10px;
-
-    section.home-content
-    {
-      border: 
-      {
-        style: solid none none none;
-        width: thin;
-      }
-    }
+  @include maincontent;
 }
-

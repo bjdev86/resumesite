@@ -1,0 +1,6 @@
+@import '../sitewide';
+
+.single-main-content
+{
+    @include maincontent;
+}

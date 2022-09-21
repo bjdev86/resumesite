@@ -1,6 +1,11 @@
 {{ define "main-content" }}
 
-    <p>This is the single template page</p>
-    {{.Content}}
+    <!-- Inject the sidebar main nav menu -->
+    {{partial "sidebar/sidebar.html" . }}
     
+    <!-- Wrap main content in div to place it in relation to side nav bar -->
+    <div class="single-main-content">
+      {{.Content}}
+    </div>
+
 {{end}}

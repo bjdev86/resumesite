@@ -7,23 +7,6 @@
 @import 'layouts/listpages';
 @import 'schemes';
 
-/********************************** Site wide Mixins **************************/
-@mixin headingDef 
-{
-    font: 
-    {
-        famliy: $font-family;
-    }
-}
-/******************************************************************************/
-
-
-
-.main-content
-{
-
-}
-
 // Headings
 h1
 {

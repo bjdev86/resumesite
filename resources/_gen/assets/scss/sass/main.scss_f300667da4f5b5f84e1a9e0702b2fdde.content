@@ -1,5 +1,9 @@
 /* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
  * favor of '@use' */
+/********************************** Site wide Mixins **************************/
+/******************************************************************************/
+/********************************* Site wide Variables ************************/
+/******************************************************************************/
 .side-bar {
   height: 100%;
   width: 260px;
@@ -61,35 +65,21 @@
   .imgshortcard-grid .imgshortcard-right {
     grid-area: rght; }
 
-.side-bar {
-  height: 100%;
-  width: 260px;
-  position: fixed;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  background-color: darkgreen;
-  padding-top: 20px; }
-  .side-bar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 25px;
-    display: block;
-    text-decoration: none;
-    color: yellow;
-    text-align: center; }
-    .side-bar a:hover {
-      color: darkcyan; }
-  .side-bar .side-bar-links {
-    margin: 0;
-    border: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
+/********************************** Site wide Mixins **************************/
+/******************************************************************************/
+/********************************* Site wide Variables ************************/
+/******************************************************************************/
+.single-main-content {
+  margin-left: 260px;
+  padding: 0px 10px; }
+  .single-main-content section.home-content {
+    border-style: solid none none none;
+    border-width: thin; }
 
+/********************************** Site wide Mixins **************************/
+/******************************************************************************/
+/********************************* Site wide Variables ************************/
+/******************************************************************************/
 .list-main-content {
   margin-left: 260px;
   padding: 0px 10px; }
@@ -97,8 +87,6 @@
     border-style: solid none none none;
     border-width: thin; }
 
-/********************************** Site wide Mixins **************************/
-/******************************************************************************/
 h1 {
   font-famliy: Arial, Helvetica, sans-serif;
   color: darkgreen; }

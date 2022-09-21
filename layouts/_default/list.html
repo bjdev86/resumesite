@@ -1,14 +1,7 @@
 {{ define "main-content" }}
-<!-- Main Menu -->
-<div class="side-bar">
-  <div class="side-bar-links">
-  {{ range sort .Site.Menus.home "Weight" }}
 
-    <a href="{{.URL}}"> {{.Name}} </a>
-
-  {{ end }}
-  </div>
-</div>
+<!-- Inject the sidebar main nav menu -->
+{{partial "sidebar/sidebar.html" . }}
 
 <!-- Main Content -->
 <div class="list-main-content">
