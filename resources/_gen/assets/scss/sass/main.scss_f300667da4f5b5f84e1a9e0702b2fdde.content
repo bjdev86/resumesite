@@ -18,6 +18,8 @@
     text-decoration: none;
     color: yellow;
     text-align: center; }
+    .side-bar a:hover {
+      color: darkcyan; }
   .side-bar .side-bar-links {
     margin: 0;
     border: 0;
@@ -77,6 +79,8 @@
     text-decoration: none;
     color: yellow;
     text-align: center; }
+    .side-bar a:hover {
+      color: darkcyan; }
   .side-bar .side-bar-links {
     margin: 0;
     border: 0;

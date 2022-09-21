@@ -25,7 +25,12 @@ $sideBarWidth: 260px;
         display: block;
         text-decoration: none;
         color: $nav-text-color; 
-        text-align: center;          
+        text-align: center;  
+        
+        &:hover
+        {
+            color: darkcyan;
+        }
     }
 
     // Center the links on the side-bar

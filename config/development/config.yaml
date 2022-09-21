@@ -11,21 +11,21 @@ menu:
         Weight: 0
         identifier: "home"
 
-      - Name: "Projects"
-        URL: "#projects"
-        Weight: 1
-        identifier: "projects"
-
       - Name: "Proficiencies"
-        URL: "#skills"
-        Weight: 2
+        URL: "#proficiencies"
+        Weight: 1
         identifier: "proficiencies"
 
+      - Name: "Portfolio"
+        URL: "#portfolio"
+        Weight: 2
+        identifier: "portfolio"
+
       - Name: "Experience"
-        URL: "#Experience"
+        URL: "#experience"
         Weight: 3
 
       - Name: "Education"
-        URL: "#specialskills"
+        URL: "#education"
         Weight: 4
 ---

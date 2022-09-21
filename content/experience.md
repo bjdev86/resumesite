@@ -1,3 +1,7 @@
+---
+Name: 'experience'
+Weight: 3
+---
 # Experience
 
 {{< shortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath = "gallryproj.jpg" detailsLink = "details/"  >}}

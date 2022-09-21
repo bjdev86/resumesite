@@ -4,7 +4,7 @@
   <div class="side-bar-links">
   {{ range sort .Site.Menus.home "Weight" }}
 
-    <a href="#{{.Weight }}"> {{.Name}} </a>
+    <a href="{{.URL}}"> {{.Name}} </a>
 
   {{ end }}
   </div>
@@ -13,21 +13,21 @@
 <!-- Main Content -->
 <div class="list-main-content">
 
-  <section class="first">
+  <section class="first" id="home">
     <!-- Print out the content for the homepage (main _index.md) -->
     {{.Content}}
   </section>
 
   <!-- Iterate through all the index pages (markdown files) that are located 
        next to this _index.md file.-->
-  {{ range $page := .Pages }}
+  {{ range $page := sort .Pages "Weight" }}
     
     {{ with .File }}
 
     <!-- If the page (markdown file) iterated is at the root add it's contents 
          to the page (ignore all other pages) -->
       {{ if eq .Dir "/" }}
-        <section class="home-content">
+        <section class="home-content" id="{{$page.Name}}">
           
           {{ $page.Content }}
 
