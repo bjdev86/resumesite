@@ -75,6 +75,13 @@
   .single-main-content section.home-content {
     border-style: solid none none none;
     border-width: thin; }
+  .single-main-content .top-navtrail {
+    background: cadetblue; }
+    .single-main-content .top-navtrail a {
+      text-decoration: none; }
+      .single-main-content .top-navtrail a:hover {
+        color: blueviolet;
+        text-decoration: underline; }
 
 /********************************** Site wide Mixins **************************/
 /******************************************************************************/

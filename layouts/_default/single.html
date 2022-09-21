@@ -1,11 +1,42 @@
 {{ define "main-content" }}
-
+    
     <!-- Inject the sidebar main nav menu -->
-    {{partial "sidebar/sidebar.html" . }}
+    {{ partial "sidebar/sidebar.html" . }}
     
     <!-- Wrap main content in div to place it in relation to side nav bar -->
     <div class="single-main-content">
+      <div class="top-navtrail">
+        
+          <!-- Prepend the trail with a link back to home -->
+          <a href="{{ `` | absLangURL }}">Home</a>
+
+          <!-- Calculate the current link trail from homepage (root) to here -->
+          {{ with .Page.File }}
+          <!-- Instansiate new local scratchpad -->
+          {{ $scratch := newScratch }}
+          
+          <!-- Split along path seperator -->
+          {{$path := split .Path "/" }}
+       
+          <!-- Iterate path to print out trail 
+               range where $path . "!=" "index.md" didn't work. -->
+          {{ range $path }}
+            
+            <!-- Filter out "index.md" the index it's not neccesary -->
+            {{ if ne . "index.md" }}
+
+            <!-- Log current trail dir on scratch pad-->
+            {{ $scratch.Add "trail" . }} {{ $scratch.Add "trail" "/" }}
+              => <a href="{{ $scratch.Get `trail` | absURL}}">{{ humanize . }}</a>
+            
+            {{ end }}
+          {{ end }}  
+        {{ end }}
+      </div>
+      
+      <div>
       {{.Content}}
+      </div>
     </div>
 
 {{end}}

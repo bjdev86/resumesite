@@ -5,7 +5,7 @@ Weight: 2
  
 # Portfolio
 
-{{< imgshortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath ="gallryproj.jpg" detailsLink = "details/" >}}
+{{< imgshortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath ="gallryproj.jpg" detailsLink = "projects/" >}}
     
    This is my first shortcard, what do I  think?  
    hi

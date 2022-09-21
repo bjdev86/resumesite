@@ -12,6 +12,8 @@ params:
 #    -src: 
 ---
 
-Home
+# Ben Miller
+
+Motivated and driven developer ready to deliver results by solving problems.
 
 https://webbinaro.dev/
