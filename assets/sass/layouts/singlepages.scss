@@ -1,7 +1,12 @@
 @import '../sitewide';
 
-.single-main-content
+.single-base
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: stretch;
+
     @include maincontent;
     
     .top-navtrail

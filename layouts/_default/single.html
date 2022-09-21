@@ -4,7 +4,7 @@
     {{ partial "sidebar/sidebar.html" . }}
     
     <!-- Wrap main content in div to place it in relation to side nav bar -->
-    <div class="single-main-content">
+    <div class="single-base">
       <div class="top-navtrail">
         
           <!-- Prepend the trail with a link back to home -->
@@ -33,8 +33,9 @@
           {{ end }}  
         {{ end }}
       </div>
-      
-      <div>
+
+      <!-- Mount the content -->
+      <div class="content">
       {{.Content}}
       </div>
     </div>
