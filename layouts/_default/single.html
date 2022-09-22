@@ -4,9 +4,9 @@
     {{ partial "sidebar/sidebar.html" . }}
     
     <!-- Wrap main content in div to place it in relation to side nav bar -->
-    <div class="single-base">
+    <div class="main-container">
       <div class="top-navtrail">
-        
+        <div class="link-trail"> 
           <!-- Prepend the trail with a link back to home -->
           <a href="{{ `` | absLangURL }}">Home</a>
 
@@ -31,12 +31,13 @@
             
             {{ end }}
           {{ end }}  
-        {{ end }}
+         {{ end }}
+        </div>
       </div>
 
       <!-- Mount the content -->
       <div class="content">
-      {{.Content}}
+        {{.Content}}
       </div>
     </div>
 
