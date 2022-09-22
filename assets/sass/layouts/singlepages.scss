@@ -3,9 +3,52 @@
 .main-container
 {
     // Consider coming back and using a flexbox later.
-    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    
+    // Subtract the body margin, while adding the sidebar margin
+    margin: -8px -8px -8px ($sideBarWidth - 8px);
+    padding: 0px;
 }
 
+.top-navtrail
+{
+  background: cadetblue;
+  flex-basis: 48px; // Height of the nav trail bar
+  padding-left: 5px;
+  
+  // Use inner flex box to center nav trail inline
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+
+  // All the anchor tags that fall under the nav trail.
+  a
+  {
+    text-decoration: none;
+
+    &:hover
+    {
+      color: blueviolet;
+      text-decoration: underline;
+    }
+  }
+}
+
+.content
+{
+  padding-left: 10px;
+}
+
+/* .main-container
+{
+    // Consider coming back and using a flexbox later.
+    position: relative;
+}
+ 
 .top-navtrail
 {
     background: cadetblue;
@@ -46,4 +89,4 @@
     position: absolute;
 
     margin-top: 48px;
-}
+} */
