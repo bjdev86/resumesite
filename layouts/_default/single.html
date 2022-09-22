@@ -22,12 +22,16 @@
                range where $path . "!=" "index.md" didn't work. -->
           {{ range $path }}
             
-            <!-- Filter out "index.md" the index it's not neccesary -->
-            {{ if ne . "index.md" }}
+            <!-- Filter out "index.md" and "_index.md" the index it's not 
+                 neccesary -->
+            {{ if and (ne . "index.md") (ne . "_index.md")  }}
 
             <!-- Log current trail dir on scratch pad-->
             {{ $scratch.Add "trail" . }} {{ $scratch.Add "trail" "/" }}
-              => <a href="{{ $scratch.Get `trail` | absURL}}">{{ humanize . }}</a>
+              => 
+              <a href="{{ $scratch.Get `trail` | absURL}}">
+                {{ humanize . }}
+              </a>
             
             {{ end }}
           {{ end }}  

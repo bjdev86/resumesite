@@ -1,3 +1,6 @@
+---
+layout: single
+---
 # Project Details
 
 Projects that Ben has worked on to both futher his own knoweldge and provide services for others.  
