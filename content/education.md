@@ -2,4 +2,10 @@
 weight: 4
 ---
 
-# Education
+# Education  
+
+{{< shortcard title="Seattle Pacific University" subTitle= "Bachelor of Science" rghtMrgnCnt= "2007 - 2009" >}}
+  Computer Science (Software Engineering)<br>  
+  Spanish  <br>
+  Presidential Scholar Award
+{{< /shortcard >}} 
