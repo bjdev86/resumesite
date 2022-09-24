@@ -4,29 +4,45 @@
     grid-template-columns: repeat (3, minmax(0, max-content));
     //grid-template-rows: repeat(2, auto);
     grid-template-areas:
-        "hrd hrd hrd"
+        "hrd hrd  rght"
         "lft cntr rght";
     column-gap: 10px;
-    align-content: start;
-    justify-content: start;
-
-    .shortcard-title
+    align-content: top;
+ /*    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: flex-start;;
+    justify-content: space-between;
+    
+    .shortcard-row
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-around;
+        align-items: flex-start;
+        justify-content: flex-start;
+    } */
+    /* .shortcard-title
     {
         grid-area: hrd;
-    }
+    } */
     
     .shortcard-left
     {
         grid-area: lft;
+        justify-self: left;
     }
 
     .shortcard-main
     {
        grid-area: cntr;
+       justify-self: left;
     }
 
     .shortcard-right
     {
         grid-area: rght;
+        justify-self: right;
+        
     }
 }

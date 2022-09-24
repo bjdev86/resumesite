@@ -36,18 +36,36 @@
 .shortcard {
   display: grid;
   grid-template-columns: repeat 3, minmax(0, max-content);
-  grid-template-areas: "hrd hrd hrd" "lft cntr rght";
+  grid-template-areas: "hrd hrd  rght" "lft cntr rght";
   column-gap: 10px;
-  align-content: start;
-  justify-content: start; }
-  .shortcard .shortcard-title {
-    grid-area: hrd; }
+  align-content: top;
+  /*    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: flex-start;;
+    justify-content: space-between;
+    
+    .shortcard-row
+    {
+        display: flex;
+        flex-flow: column nowrap;
+        align-content: space-around;
+        align-items: flex-start;
+        justify-content: flex-start;
+    } */
+  /* .shortcard-title
+    {
+        grid-area: hrd;
+    } */ }
   .shortcard .shortcard-left {
-    grid-area: lft; }
+    grid-area: lft;
+    justify-self: left; }
   .shortcard .shortcard-main {
-    grid-area: cntr; }
+    grid-area: cntr;
+    justify-self: left; }
   .shortcard .shortcard-right {
-    grid-area: rght; }
+    grid-area: rght;
+    justify-self: right; }
 
 .imgshortcard-grid {
   display: grid;
