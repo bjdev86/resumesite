@@ -3,36 +3,60 @@
     hand margin content as well. -->
 <div class="shortcard">
    
-   <!-- Title Row -->
-   <div class="shortcard-title">
-    
-   </div> 
+   <!-- If Left content was passed place title here -->
+   {{ if or (.Get "lftImg") (.Get "lftTxt") }}
+     <div class="shortcard-title">
+       <h2>{{ .Get "title" }}</h2>   
+     </div> 
+     {{ end }}
+     
+     <!-- If the left image content was passed place it -->   
+     <div class="shortcard-left"> 
+     
+      <!-- If the left text was passed. -->
+      {{ with .Get "lftTxt" }}
+        <p> {{.}} </p> 
+      {{ end }}
 
+      <!-- Local Variable Declaration -->
+       {{ $lftimgHeight := .Get "lftImgHeight" }}
+       {{ $lftimgWidth := .Get "lftImgWidth" }}
 
-   <!-- Right Content -->   
-    {{ with .Get "lftMrgnCnt" }} 
-      <div class="shortcard-left">
-        {{.}} 
-      </div>
-    {{ end }}
-   
+     {{ with .Get "lftImg" }} 
+     <!-- Prepend directory wildcard to include dir tree in search -->
+     {{ $imgPath := . | printf "%s%s" "**/" }}
+        
+     <!-- Search for the image in the global resources (assets/) -->
+     {{ with resources.GetMatch $imgPath }}
+       <img src="{{.}}" width=
+       "{{ if $lftimgWidth }} {{$lftimgWidth}} {{else}} 150px {{end}}" 
+       height=
+       "{{ if $lftimgHeight }} {{$lftimgHeight}} {{else}} 100px {{end}}"/>
+     {{ end }} 
+   {{ end }}
 
-    <!-- If no left content was passed then class the main content div so that 
-         the content is put in the center cell. Otherwise put content in the 
-         left hand cell. -->
-    {{ if .Get "lftMrgnCnt" }}
+   </div>
+
+    <!-- If left content was not passed then have the main content span from 
+         the left most cell to the middle cell. If left content was passed then 
+         seperate the content as normal. -->
+    {{ if or (.Get "lftImg") (.Get "lftTxt") }}
       <div class="shortcard-main">
+
     {{ else }}
-      <div class="shortcard-left">
+      <div class="shortcard-main fill-left">
+        <!-- Layout the rest of the content of the main content cell -->
+        <h2>
+          {{ with .Get "title" }} {{.}} {{ end }}
+        </h2>
+
     {{ end }}
-      <h2>
-        {{ with .Get "title" }} {{.}} {{ end }}
-      </h2>
+    
       <h3> 
         {{ with .Get "subTitle" }} {{.}} {{ end }}
       </h3>
         <!-- Main content -->
-         <p> {{ .Inner }} </p> 
+          {{ .Inner | markdownify }} 
 
         <!-- Add link if ref was passed-->
         {{ $link := .Get "detailsLink" | safeURL }}
@@ -43,11 +67,34 @@
         {{ end }}
     </div>
   
-    <!-- Left hand margin content -->
+    <!-- Right hand margin content -->
    <div class="shortcard-right">
+     
+     <!-- If text was passed for this section then display it. -->
+       {{ with .Get "rghtTxt" }}
+         <p>{{.}}</p>
+       {{ end }}
 
-      {{with .Get "rghtMrgnCnt" }} <p> {{.}} </p> {{ end }} 
-    
+      <!-- Local Variable Declaration -->
+      {{ $rghtimgHeight := .Get "rghtImgHeight" }}
+      {{ $rghtimgWidth := .Get "rghtImgWidth" }}
+
+      <!-- If the path for the right image was passed display it. -->
+        {{with .Get "rghtImg" }} 
+        
+        <!-- Prepend directory wildcard to include dir tree in search -->
+        {{ $imgPath := . | printf "%s%s" "**/" }}
+        
+        <!-- Search for the image in the global resources (assets/) -->
+        {{ with resources.GetMatch $imgPath }}
+          <img src="{{.}}" 
+           width=
+           "{{ if $rghtimgWidth }} {{$rghtimgWidth}} {{else}} 150px {{end}}" 
+           height=
+           "{{ if $rghtimgHeight }} {{$rghtimgHeight}} {{else}} 100px {{end}}"/>
+        {{ end }} 
+      {{ end }} 
+
     </div>
   
 </div>
