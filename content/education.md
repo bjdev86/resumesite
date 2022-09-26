@@ -2,7 +2,7 @@
 weight: 4
 ---
 
-# Education  
+## Education  
 
 {{< shortcard title="Seattle Pacific University" subTitle= "Bachelor of Science" rghtTxt= "2007 - 2009" >}}
 Computer Science  

@@ -1,4 +1,45 @@
+// Import font fron Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Khand');
 $nav-text-color: yellow;
-$nav-background-color: rgb(2, 77, 29);
+// Colors
 
-$font-family: Arial, Helvetica, sans-serif;
+$color1: #00AEAD;
+$color2: #019875;
+$color3: #72CC50;
+$color4: #BFD834;
+
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+
+// Mumble Jungle
+//https://www.schemecolor.com/mumble-jungle.php#download
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+
+// Beautiful Waterfalls
+// https://www.schemecolor.com/beautiful-waterfalls.php
+$color5: #226617;
+$color6: #73840F;
+$color7: #B4C059;
+$color8: #00adcf;
+$color9: #F0F8F9;
+$color10: #949494;
+$color11: black;
+
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
+
+
+$font-family: 'Khand', sans-serif;

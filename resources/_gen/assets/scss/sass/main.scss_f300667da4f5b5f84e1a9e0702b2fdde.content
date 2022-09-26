@@ -1,9 +1,55 @@
 /* Imports (NOTE: Hugo requires @import to work, but SaSS is phasing it out in 
  * favor of '@use' */
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
 /********************************** Site wide Mixins **************************/
 /******************************************************************************/
 /********************************* Site wide Variables ************************/
 /******************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
+@import url("https://fonts.googleapis.com/css2?family=Kreon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khand");
 .side-bar {
   height: 100%;
   width: 260px;
@@ -12,18 +58,18 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
-  background-color: #024d1d;
+  background-color: #226617;
   padding-top: 20px; }
   .side-bar a {
-    padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 35px;
+    font-family: "Khand", sans-serif;
     display: block;
     text-decoration: none;
-    color: yellow;
+    color: #B4C059;
     text-align: center; }
     .side-bar a:hover {
-      color: darkcyan; }
+      color: #F0F8F9; }
   .side-bar .side-bar-links {
     margin: 0;
     border: 0;
@@ -81,6 +127,23 @@
   .imgshortcard-grid .imgshortcard-right {
     grid-area: rght; }
 
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
 /********************************** Site wide Mixins **************************/
 /******************************************************************************/
 /********************************* Site wide Variables ************************/
@@ -157,6 +220,23 @@
 
     margin-top: 48px;
 } */
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
 /********************************** Site wide Mixins **************************/
 /******************************************************************************/
 /********************************* Site wide Variables ************************/
@@ -168,26 +248,87 @@
     border-style: solid none none none;
     border-width: thin; }
 
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
+/* $color5: #A4E2A0;
+$color6: #8ACE90;
+$color7: #478C76;
+$color8: #254B44;
+$color9: #A6795E;
+$color10: #8d8d8d; */
+/* $color5: #115F37;
+$color6: #478749;
+$color7: #8B987D;
+$color8: #736350;
+$color9: #544F3D;
+$color11: #443614;
+$color10: #8d8d8d; */
+/* $color10: #6F9580;
+$color11: #95AA63;
+$color12: #8FCAB4;
+$color13: #E4E4DC; */
+/********************************** Site wide Mixins **************************/
+/******************************************************************************/
+/********************************* Site wide Variables ************************/
+/******************************************************************************/
 h1 {
-  font-famliy: Arial, Helvetica, sans-serif;
-  color: darkgreen; }
+  font-family: "Khand", sans-serif;
+  font-weight: bold;
+  color: #B4C059;
+  font-size: 65pt; }
 
 h2 {
-  font-famliy: Arial, Helvetica, sans-serif;
-  color: gray;
-  margin-top: 0px; }
+  font-family: "Khand", sans-serif;
+  font-weight: bold;
+  color: #00adcf;
+  margin-top: 0px;
+  font-size: 32pt; }
 
 h3 {
-  font-famliy: Arial, Helvetica, sans-serif;
-  color: blue;
-  margin-top: 0 px; }
+  font-family: "Khand", sans-serif;
+  font-weight: bold;
+  color: black;
+  margin-top: 0 px;
+  margin-bottom: 0px;
+  font-size: 17pt; }
+
+h4 {
+  font-family: "Khand", sans-serif;
+  font-weight: bold;
+  color: #949494;
+  margin-top: 0px;
+  font-size: 15pt; }
+
+h5 {
+  font-family: "Khand", sans-serif;
+  font-weight: bold; }
+
+h6 {
+  font-family: "Khand", sans-serif;
+  font-weight: bold; }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #acacac;
-  margin-top: 0px; }
+  font-family: "Khand", sans-serif;
+  color: #949494;
+  margin-top: 0px;
+  font-size: 14pt; }
 
 ul {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Khand", sans-serif;
   color: #acacac;
   margin-top: 0px; }

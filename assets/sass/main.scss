@@ -6,35 +6,58 @@
 @import 'layouts/singlepages';
 @import 'layouts/listpages';
 @import 'schemes';
+@import 'sitewide';
 
 // Headings
 h1
 {
     @include headingDef;
-    color: darkgreen;
-    
+    color: $color7;
+    font-size: 65pt;
 }
 
 h2
 {
     @include headingDef;
-    color: gray;
+    color: $color8;
     margin-top: 0px;
+    font-size: 32pt;
 }
 
 h3
 {
     @include headingDef;
-    color: blue;
-    margin-top: 0 px;   
+    color: black;
+    margin-top: 0 px; 
+    margin-bottom: 0px;
+    font-size: 17pt;
+}
+
+h4
+{
+  @include headingDef;
+  color: $color10;
+  margin-top: 0px;
+  font-size: 15pt;
+}
+
+h5
+{
+  @include headingDef;
+}
+
+h6
+{
+  @include headingDef;
 }
 
 // All paragraphs
 p
 {
     font-family: $font-family;
-    color: rgb(172, 172, 172);
+    color: $color10;
     margin-top: 0px;
+    font-size: 14pt;
 }
 ul
 {

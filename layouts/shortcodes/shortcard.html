@@ -6,7 +6,7 @@
    <!-- If Left content was passed place title here -->
    {{ if or (.Get "lftImg") (.Get "lftTxt") }}
      <div class="shortcard-title">
-       <h2>{{ .Get "title" }}</h2>   
+       <h3>{{ .Get "title" }}</h3>   
      </div> 
      {{ end }}
      
@@ -46,15 +46,15 @@
     {{ else }}
       <div class="shortcard-main fill-left">
         <!-- Layout the rest of the content of the main content cell -->
-        <h2>
+        <h3>
           {{ with .Get "title" }} {{.}} {{ end }}
-        </h2>
+        </h3>
 
     {{ end }}
     
-      <h3> 
+      <h4> 
         {{ with .Get "subTitle" }} {{.}} {{ end }}
-      </h3>
+      </h4>
         <!-- Main content -->
           {{ .Inner | markdownify }} 
 
@@ -62,12 +62,12 @@
         {{ $link := .Get "detailsLink" | safeURL }}
         {{ if $link }}        
           
-        </br><a href = "{{ $link }}" > Read On... </a></br></br>
+        </br></br><a href = "{{ $link }}" > Read On... </a></br></br>
 
         {{ end }}
     </div>
   
-    <!-- Right hand margin content -->
+   <!-- Right hand margin content -->
    <div class="shortcard-right">
      
      <!-- If text was passed for this section then display it. -->

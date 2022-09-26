@@ -4,34 +4,50 @@ Weight: 3
 ---
 # Experience
 
-{{< shortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath = "gallryproj.jpg" detailsLink = "details/"  >}}
-    
-   This is my first shortcard, what do I  think?  
-   hi
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit   anim id est laborum.
-
+{{< shortcard title = "Web Designer" subTitle = "Music Box Angels, Remote" 
+    rghtTxt = "August 2022 - Present" >}}
+  ...    
 {{< /shortcard >}}  
 
-{{< shortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath = "gallryproj.jpg" detailsLink = "details/"  >}}
+{{< shortcard title = "Full Stack Web Developer" 
+    subTitle = "Church Extension Plan, Salem, OR"  
+    rghtTxt = "November 2020 - August 2022" >}}
     
-   This is my first shortcard, what do I  think?  
-   hi
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit   anim id est laborum.
+   ...
 
 {{< /shortcard >}}
 
-{{< shortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath = "gallryproj.jpg" detailsLink = "details/"  >}}
+{{< shortcard title = "Web Developer" subTitle = "Self-Employeed, Gervais, OR" 
+    rghtTxt = "April 2022 - Present"  >}}
     
-   This is my first shortcard, what do I  think?  
-   hi
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit   anim id est laborum.
+   ...
 
 {{< /shortcard >}}
 
-{{< shortcard title = "Company"  rghtMrgnCnt = "June 4, 2012 - Jun 24, 2016" imgPath = "gallryproj.jpg" detailsLink = "details/"  >}}
+{{< shortcard title = "Freelance Full-Stack Web Developer " 
+    subTitle = "Coleman Agriculture, Gervias, OR"  
+    rghtTxt = "September 2018 - January 2020 " >}}
     
-   This is my first shortcard, what do I  think?  
-   hi
-       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit   anim id est laborum.
+  ...
 
+{{< /shortcard >}}
+
+{{< shortcard title = "Student Web Developer" 
+    subTitle = "Seattle Pacific University, Seattle, WA"  
+    rghtTxt = "January 2009 - March 2009" >}}
+    
+  ...
+  
+{{< /shortcard >}}
+
+{{< shortcard title = "Freelance Full-Stack Web Developer " subTitle = "Coleman Agriculture"  rghtTxt = "September 2018 - January 2020 " >}}
+    
+  ...
+  
+{{< /shortcard >}}
+
+{{< shortcard title = "Freelance Full-Stack Web Developer " subTitle = "Coleman Agriculture"  rghtTxt = "September 2018 - January 2020 " >}}
+    
+  ...
+  
 {{< /shortcard >}}
