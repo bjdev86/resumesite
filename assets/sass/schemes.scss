@@ -1,7 +1,7 @@
 // Import font fron Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Kreon&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Khand');
-$nav-text-color: yellow;
+@import "../fonts/Khand/Khand-Regular.ttf";
+@import '../fonts/PlayfairDisplay/static/PlayfairDisplay-Regular.ttf';
+
 // Colors
 
 $color1: #00AEAD;
@@ -41,5 +41,14 @@ $color11: #95AA63;
 $color12: #8FCAB4;
 $color13: #E4E4DC; */
 
+// Font sizes
+$small-font-size: 8px;
+$regular-font-size: 16px;
+$h5-font-size: 24px;
+$h4-font-size: 32px;
+$h3-font-size: 48px; 
+$h2-font-size: 64px; 
+$h1-font-size: 95px; 
 
-$font-family: 'Khand', sans-serif;
+$hdr-font-family: 'Khand', sans-serif;
+$par-font-family: 'PlayfairDisplay';

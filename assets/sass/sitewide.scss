@@ -3,8 +3,8 @@
 /********************************** Site wide Mixins **************************/
 @mixin headingDef 
 {
-  font-family: $font-family;
-  font-weight: bold;
+  font-family: $hdr-font-family;
+  font-weight: 500;
 }
 
 @mixin maincontent

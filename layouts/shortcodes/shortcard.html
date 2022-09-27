@@ -3,72 +3,58 @@
     hand margin content as well. -->
 <div class="shortcard">
    
-   <!-- If Left content was passed place title here -->
-   {{ if or (.Get "lftImg") (.Get "lftTxt") }}
-     <div class="shortcard-title">
-       <h3>{{ .Get "title" }}</h3>   
+   <!-- If Left content was passed place title here in header row-->
+   
+     <div class="header">
+       <h4>{{ .Get "title" }} </h4>  
+       <h5>{{ .Get "subTitle" }} </h5>
      </div> 
-     {{ end }}
-     
-     <!-- If the left image content was passed place it -->   
-     <div class="shortcard-left"> 
-     
-      <!-- If the left text was passed. -->
-      {{ with .Get "lftTxt" }}
-        <p> {{.}} </p> 
-      {{ end }}
-
-      <!-- Local Variable Declaration -->
-       {{ $lftimgHeight := .Get "lftImgHeight" }}
-       {{ $lftimgWidth := .Get "lftImgWidth" }}
-
-     {{ with .Get "lftImg" }} 
-     <!-- Prepend directory wildcard to include dir tree in search -->
-     {{ $imgPath := . | printf "%s%s" "**/" }}
-        
-     <!-- Search for the image in the global resources (assets/) -->
-     {{ with resources.GetMatch $imgPath }}
-       <img src="{{.}}" width=
-       "{{ if $lftimgWidth }} {{$lftimgWidth}} {{else}} 150px {{end}}" 
-       height=
-       "{{ if $lftimgHeight }} {{$lftimgHeight}} {{else}} 100px {{end}}"/>
-     {{ end }} 
-   {{ end }}
-
-   </div>
-
-    <!-- If left content was not passed then have the main content span from 
-         the left most cell to the middle cell. If left content was passed then 
-         seperate the content as normal. -->
-    {{ if or (.Get "lftImg") (.Get "lftTxt") }}
-      <div class="shortcard-main">
-
-    {{ else }}
-      <div class="shortcard-main fill-left">
-        <!-- Layout the rest of the content of the main content cell -->
-        <h3>
-          {{ with .Get "title" }} {{.}} {{ end }}
-        </h3>
-
-    {{ end }}
     
-      <h4> 
-        {{ with .Get "subTitle" }} {{.}} {{ end }}
-      </h4>
-        <!-- Main content -->
-          {{ .Inner | markdownify }} 
+    <!-- If the left image content was passed place it -->   
+    <div class="content-left "> 
+      
+        <!-- If the left text was passed. -->
+        {{ with .Get "lftTxt" }}
+          <p> {{.}} </p> 
+        {{ end }} 
+
+        <!-- If an image was passed place it -->
+        {{ if .Get "lftImg" }} 
+      
+        <!-- Local Variable Declaration -->
+        {{ $lftimgHeight := .Get "lftImgHeight" }}
+        {{ $lftimgWidth := .Get "lftImgWidth" }}
+      
+        <!-- Prepend directory wildcard to include dir tree in search -->
+        {{ $imgPath := .Get "lftImg" | printf "%s%s" "**/" }}
+
+        <!-- Search for the image in the global resources (assets/) -->
+        {{ with resources.GetMatch $imgPath }}
+          <img src="{{.RelPermalink}}" 
+          width= "{{ if $lftimgWidth }} {{$lftimgWidth}} {{else}} 150px {{end}}" 
+          height=
+          "{{ if $lftimgHeight }} {{$lftimgHeight}} {{else}} 100px {{end}}"/>
+        {{ end }} 
+      {{ end }}
+    </div>
+
+      <div class="content-center {{ if and (not (.Get `lftImg`)) 
+                  (not (.Get `lftTxt` ))}} left {{ end }}">
+      <!-- Place the main content on the next row-->
+      {{ .Inner | markdownify }} 
 
         <!-- Add link if ref was passed-->
         {{ $link := .Get "detailsLink" | safeURL }}
-        {{ if $link }}        
-          
-        </br></br><a href = "{{ $link }}" > Read On... </a></br></br>
+          {{ if $link }}        
+           </br></br><a href = "{{ .Get `detailsLink` | safeURL }}" > 
+            Read On... 
+           </a></br></br>
+         {{ end }}
+      </div>
+    
 
-        {{ end }}
-    </div>
-  
-   <!-- Right hand margin content -->
-   <div class="shortcard-right">
+     <!-- Right hand margin content -->
+     <div class="content-right">
      
      <!-- If text was passed for this section then display it. -->
        {{ with .Get "rghtTxt" }}
@@ -93,8 +79,6 @@
            height=
            "{{ if $rghtimgHeight }} {{$rghtimgHeight}} {{else}} 100px {{end}}"/>
         {{ end }} 
-      {{ end }} 
-
-    </div>
-  
+      {{ end }}     
+   </div>
 </div>
