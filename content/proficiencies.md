@@ -2,6 +2,6 @@
 Name: 'proficiencies'
 Weight: 1
 ---
-# Proficiencies
+## Proficiencies
 
 ![](./icons/css.png ) CSS ![](./icons/css.png) HTML

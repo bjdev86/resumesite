@@ -2,11 +2,11 @@
 Name: 'experience'
 Weight: 3
 ---
-# Experience
+## EXPERIENCE
 
 {{< shortcard title = "Web Designer" subTitle = "Music Box Angels, Remote" 
     rghtTxt = "August 2022 - Present" >}}
-  ...    
+  Fi-fye-fo-thumb I smell the blood of an Englishman.    
 {{< /shortcard >}}  
 
 {{< shortcard title = "Full Stack Web Developer" 
