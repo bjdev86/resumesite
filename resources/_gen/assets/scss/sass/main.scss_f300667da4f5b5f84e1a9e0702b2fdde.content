@@ -73,9 +73,9 @@ $color13: #E4E4DC; */
   grid-template-columns: repeat 3, minmax(0, max-content);
   grid-template-areas: "hdr hdr  rght" "lft cntr rght" "ftr ftr  ftr";
   column-gap: 1em;
-  row-gap: 2em;
+  row-gap: 1.25em;
   align-content: start;
-  margin-bottom: 4em; }
+  margin-bottom: 3em; }
   .shortcard .header {
     grid-area: hdr;
     justify-self: left;
