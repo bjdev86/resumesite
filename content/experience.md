@@ -46,15 +46,3 @@ Weight: 3
   ...
   
 {{< /shortcard >}}
-
-{{< shortcard title = "Freelance Full-Stack Web Developer " subTitle = "Coleman Agriculture"  rghtTxt = "September 2018 - January 2020 " >}}
-    
-  ...
-  
-{{< /shortcard >}}
-
-{{< shortcard title = "Freelance Full-Stack Web Developer " subTitle = "Coleman Agriculture"  rghtTxt = "September 2018 - January 2020 " >}}
-    
-  ...
-  
-{{< /shortcard >}}
