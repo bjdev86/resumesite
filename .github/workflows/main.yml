@@ -29,7 +29,7 @@ jobs:
       # Install HUGO CLI 
       - name: Install HUGO CLI
         run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          sudo apt-get install hugo \
            && sudo dpkg -i ${{ runner.temp }}/hugo.deb
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -41,7 +41,7 @@ jobs:
           hugo \
           --minify \
           -D
-          ls
+          ls 
 
       # Runs a single command using the runners shell
       # - name: Run a one-line script
