@@ -29,8 +29,7 @@ jobs:
       # Install HUGO CLI 
       - name: Install HUGO CLI
         run: |
-          sudo apt-get install -y hugo \
-           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          sudo apt-get install -y hugo 
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
