@@ -44,7 +44,7 @@ jobs:
       # Build site
       - name: Build HUGO site 
         run: |
-          hugo --minify -D \
+          hugo --minify -D
           ls 
 
       # Runs a single command using the runners shell
