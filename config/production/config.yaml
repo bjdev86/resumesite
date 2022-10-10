@@ -1,5 +1,31 @@
 ---
-baseURL: 'http://example.org/'
+baseURL: 'benmiller.tech/'
 languageCode: 'en-us'
 title: 'Meet Ben Miller'
+
+# Main menu
+menu:
+  main:
+      - Name: "Home"
+        URL: "#home"
+        Weight: 0
+        identifier: "home"
+
+      - Name: "Proficiencies"
+        URL: "#proficiencies"
+        Weight: 1
+        identifier: "proficiencies"
+
+      - Name: "Portfolio"
+        URL: "#portfolio"
+        Weight: 2
+        identifier: "portfolio"
+
+      - Name: "Experience"
+        URL: "#experience"
+        Weight: 3
+
+      - Name: "Education"
+        URL: "#education"
+        Weight: 4  
 ---
