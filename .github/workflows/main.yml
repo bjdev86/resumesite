@@ -26,10 +26,17 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the 
     # job
     steps:
+      # FIGURE OUT WHY THIS STEP IS CAUSING AN ISSUE: I believe what is going 
+      # on here is a version mismatch between my local dev environment and the 
+      # environment running in this container. 
+      #- name: Install HUGO CLI
+        #run: sudo apt-get instatll -y hugo
+
       # Install HUGO CLI 
       - name: Install HUGO CLI
         run: |
-          sudo apt-get install -y hugo 
+           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -37,9 +44,7 @@ jobs:
       # Build site
       - name: Build HUGO site 
         run: |
-          hugo \
-          --minify \
-          -D
+          hugo --minify -D \
           ls 
 
       # Runs a single command using the runners shell
