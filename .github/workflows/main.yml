@@ -10,7 +10,6 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
   
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -35,8 +34,8 @@ jobs:
       # Install HUGO CLI 
       - name: Install HUGO CLI
         run: |
-           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
-           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
           
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
@@ -53,19 +52,8 @@ jobs:
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.DIGI_OCE_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
-      #   env: 
-      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
-      #   run: |
-      #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
-      #     ssh-add - <<< 
+
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
-        run: rsync -rav public bmiller@137.184.190.165:/var/www/benmiller.tech/
-        # env: 
-        #   DO_KEY: ${{ secrets.DIGI_OCE_KEY }}
-        # run: cat $DO_KEY
-        # run: |
-          # eval $(ssh-agent)
-          # echo $SSH_AUTH_SOCK
-          # ssh-add < "$DO_KEY"
-        #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
+        run: rsync -rav public bmiller@137.184.190.165:/var/www/benmiller.tech/html/
+    
