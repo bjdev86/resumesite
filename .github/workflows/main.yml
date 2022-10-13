@@ -47,8 +47,16 @@ jobs:
           hugo --minify -D
           ls 
 
+      # Setup SSH keys to be added to ssh-agent 
+      # - name: Setup SSH Keys and Known_hosts
+      #   env: 
+      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
+      #   run: |
+      #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+      #     ssh-add - <<< 
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
         env: 
           DO_KEY: ${{ secrets.DO_SSH_KEY }}
-        run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
+        run: cat "${{ DO_KEY }}"
+        #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
