@@ -58,5 +58,5 @@ jobs:
       - name: Deploy to Digital Ocean webserver
         env: 
           DO_KEY: ${{ secrets.DO_SSH_KEY }}
-        run: cat ${{ secrets.DO_SSH_KEY }}
+        run: cat ${{ DO_KEY }}
         #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
