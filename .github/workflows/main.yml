@@ -59,7 +59,7 @@ jobs:
       #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
       #     ssh-add - <<< 
       # Run the command set to deploy this webserver
-      - name: Deploy to Digital Ocean webserver
+      # - name: Deploy to Digital Ocean webserver
         # env: 
         #   DO_KEY: ${{ secrets.DIGI_OCE_KEY }}
         # run: cat $DO_KEY
