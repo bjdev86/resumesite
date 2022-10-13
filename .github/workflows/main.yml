@@ -15,7 +15,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  deployment:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -47,17 +47,25 @@ jobs:
           hugo --minify -D
           ls 
 
-      # Runs a single command using the runners shell
-      # - name: Run a one-line script
-      #   run: echo Hello, world!
-
-      # # Runs a set of commands using the runners shell
-      # - name: Run a multi-line script
+      # Setup SSH keys to be added to ssh-agent 
+      - name: Setup SSH Keys and Known_hosts
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.DIGI_OCE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+      #   env: 
+      #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       #   run: |
-      #     echo Add other actions to build,
-      #     echo test, and deploy your project.
-
+      #     ssh-agent -a $SSH_AUTH_SOCK > /dev/null
+      #     ssh-add - <<< 
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
-        run: |
-          echo Deploying to digital ocean. 
+        run: rsync -rav public bmiller@137.184.190.165:/var/www/benmiller.tech/
+        # env: 
+        #   DO_KEY: ${{ secrets.DIGI_OCE_KEY }}
+        # run: cat $DO_KEY
+        # run: |
+          # eval $(ssh-agent)
+          # echo $SSH_AUTH_SOCK
+          # ssh-add < "$DO_KEY"
+        #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
