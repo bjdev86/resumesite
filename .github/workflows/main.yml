@@ -52,7 +52,7 @@ jobs:
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
           echo "${{ secrets.DIGI_OCE_KEY }}" > ~/.ssh/id_rsa
-          echo "${{ secretes.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
+          echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
       #   env: 
       #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       #   run: |
