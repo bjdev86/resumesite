@@ -59,5 +59,7 @@ jobs:
         # env: 
         #   DO_KEY: ${{ secrets.DO_SSH_KEY }}
         # run: cat $DO_KEY
-        run: echo $SSH_AUTH_SOCK
+        run: |
+          eval $(ssh-agent)
+          echo $SSH_AUTH_SOCK
         #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
