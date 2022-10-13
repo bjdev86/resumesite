@@ -62,5 +62,5 @@ jobs:
         run: |
           eval $(ssh-agent)
           echo $SSH_AUTH_SOCK
-          ssh-add $DO_KEY
+          ssh-add < "$DO_KEY"
         #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
