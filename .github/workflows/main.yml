@@ -48,7 +48,11 @@ jobs:
           ls 
 
       # Setup SSH keys to be added to ssh-agent 
-      # - name: Setup SSH Keys and Known_hosts
+      - name: Setup SSH Keys and Known_hosts
+        run: |
+          install -m 600 -D /dev/null ~/.ssh/id_rsa
+          echo "${{ secrets.DIGI_OCE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secretes.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
       #   env: 
       #     SSH_AUTH_SOCK: /tmp/ssh_agent.sock
       #   run: |
@@ -56,11 +60,11 @@ jobs:
       #     ssh-add - <<< 
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
-        env: 
-          DO_KEY: ${{ secrets.DIGI_OCE_KEY }}
+        # env: 
+        #   DO_KEY: ${{ secrets.DIGI_OCE_KEY }}
         # run: cat $DO_KEY
-        run: |
-          eval $(ssh-agent)
-          echo $SSH_AUTH_SOCK
-          ssh-add < "$DO_KEY"
+        # run: |
+          # eval $(ssh-agent)
+          # echo $SSH_AUTH_SOCK
+          # ssh-add < "$DO_KEY"
         #run: sudo scp -i DO_KEY -r public bmiller@137.184.190.165:/var/www/benmiller.tech/
