@@ -49,7 +49,5 @@ jobs:
 
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
-        with: 
-          DO_KEY: ${{ secrets.DO_SSH_KEY }}
 
         run: echo "${{ secrets.DO_SSH_KEY }}"
