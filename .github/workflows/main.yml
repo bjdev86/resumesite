@@ -64,7 +64,7 @@ jobs:
       - name: Build HUGO site 
         run: hugo --minify -D
         #CONSIDER SHOWING like the file size or something to indicate what was built
-        
+
       # Setup SSH keys to be added from Git Hub secretes to default files on 
       # runner OS. Use default files to preform rsync command to move fresly 
       # built website to webserver  
@@ -76,5 +76,7 @@ jobs:
 
       # Run the command set to deploy this webserver
       - name: Deploy to Digital Ocean webserver
-        run: rsync -rav public bmiller@137.184.190.165:/var/www/benmiller.tech/html/
+        run: |
+          rsync -rav public bmiller@137.184.190.165:/var/www/benmiller.tech/html/
+          rsync -rav public bmiller@137.184.190.165:/var/www/benjmiller.dev/html/
     
