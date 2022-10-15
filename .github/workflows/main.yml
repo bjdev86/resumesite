@@ -62,7 +62,7 @@ jobs:
       # Build site (Consider removing -D flag so that only production pages are 
       # built)
       - name: Build HUGO site 
-        run: hugo --minify -D
+        run: npm run build
         #CONSIDER SHOWING like the file size or something to indicate what was built
 
       # Setup SSH keys to be added from Git Hub secretes to default files on 
