@@ -8,6 +8,6 @@
     "dev:start:tailwind": 
       "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/index.css --jit --watch",
     "dev:start:hugo": "hugo -D serve",
-    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/index. css --jit --minify && hugo --gc --minify"
+    "build": "npx tailwindcss -i ./assets/css/input.css -o ./assets/css/index. css --jit --minify && hugo -D --gc --minify"
   }
 }
