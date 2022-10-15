@@ -71,7 +71,7 @@ jobs:
       - name: Setup SSH Keys and Known_hosts
         run: |
           install -m 600 -D /dev/null ~/.ssh/id_rsa
-          echo "${{ secrets.DIGI_OCE_KEY }}" > ~/.ssh/id_rsa
+          echo "${{ secrets.DIGI_O_KEY }}" > ~/.ssh/id_rsa
           echo "${{ secrets.KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
       # Run the command set to deploy this webserver
