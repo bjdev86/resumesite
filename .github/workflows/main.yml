@@ -55,13 +55,13 @@ jobs:
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
           
-      # Install tailwindcss for this runner to use 
-      - name: Install TailWindCSS
-        run: npm install -D tailwindcss
-        
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can 
       # access it
       - uses: actions/checkout@v3
+
+      # Install tailwindcss for this runner to use 
+      - name: Install TailWindCSS
+        run: npm install -D tailwindcss
 
       # Build site (Consider removing -D flag so that only production pages are 
       # built)
