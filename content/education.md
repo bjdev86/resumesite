@@ -13,8 +13,9 @@ Presidental Scholar Awarad
 
 {{< shortcard 
 title= "Chemeketa Community College" subTitle= "Associates Transfer Degree" rghtTxt= "2005 - 2007"  >}}
+
 Computer Science  
 Spanish  
-
 GPA: 3.9
+
 {{< /shortcard >}} 

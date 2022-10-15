@@ -3,7 +3,7 @@ Name: 'portfolio'
 Weight: 2
 ---
  
-## Portfolio
+## [Portfolio](portfolio/)
 
 {{< shortcard title = "Blog Post API"  rghtTxt = "June 4, 2012 - Jun 24, 2016" lftImg ="gallryproj.jpg" detailsLink = "portfolio/" >}}
     

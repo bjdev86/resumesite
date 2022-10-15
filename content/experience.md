@@ -17,7 +17,7 @@ Weight: 3
     rghtTxt = "November 2020 - August 2022" >}}
 
   Excelled in supporting, extending and patching core business full-stack applications. 
-  Collaborating with team members and end-user to build, test and deliver time saving 
+  Collaborating with team members and end-users to build, test and deliver time saving 
   features. Kept business and customer data safe and secure by applying SecDevOps best 
   practices. Building and maintaining CI/CD pipelines to simiplify and stablize 
   applicatoin deployment workflows to produce development team productivity.
@@ -27,7 +27,9 @@ Weight: 3
 {{< shortcard title = "Web Developer" subTitle = "Self-Employeed, Gervais, OR" 
     rghtTxt = "April 2022 - Present"  >}}
     
-   ...
+   Built efficient API for blogger application for use in personal and professional websites. Incorporated MongooseJS and MongoDB to construct an elegant, fuild schema system to ensure data integrity as it is saved and stored. Combined the schema and storage system with NestJS and TypeScript to build an organized and easy-to-use API. 
+
+   Check it out [here]()   
 
 {{< /shortcard >}}
 
@@ -35,7 +37,7 @@ Weight: 3
     subTitle = "Coleman Agriculture, Gervias, OR"  
     rghtTxt = "September 2018 - January 2020 " >}}
     
-  ...
+  Assessed use cases and workflows of hop bale production commodities. Met with hop bale production team to clarify use cases and system requirements. Initiated full stack web application to increase efficienty in hop bale production and distribution. 
 
 {{< /shortcard >}}
 
@@ -43,6 +45,6 @@ Weight: 3
     subTitle = "Seattle Pacific University, Seattle, WA"  
     rghtTxt = "January 2009 - March 2009" >}}
     
-  ...
+  Led team of fellow student developers to design, document and build a web-site content management system. Inspired teammates to achieve project target and goals. Successfully iniated Java application to ful-fill design specfication.  
   
 {{< /shortcard >}}

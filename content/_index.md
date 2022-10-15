@@ -14,11 +14,14 @@ Weight: 0
 
 **Web Designer @ Music Box Angels**
 
-Ben has over three year experience designing and developing enterprise web based systems. Expierenced with the full-stack, he is as comfortable working in Angular as NodeJS. Ben enables seamless application development work flows built on testing, documentation and the agile SDLC that feed into CD/CI pipelines.  
+Ben has over three year experience designing and developing enterprise web based systems. Expierenced with the full-stack, he is as comfortable working in Angular as NodeJS. Ben enables seamless application development work flows built on testing, documentation and the Agile SDLC that deploy via CI/CD pipelines.  
 
-This site was made using the [HUGO](http://gohugo.io) CMS framework. Inspiration was taken from the [Resume](https://themes.gohugo.io/themes/hugo-resume/) theme.
+This site was built using the [HUGO](http://gohugo.io) inspired by a [HUGO theme](https://themes.gohugo.io/themes/hugo-resume/) and deployed via a GitHub Action CI/CD pipeline.
 
-#### Certifications  
+![workflow](https://github.com/bjdev86/resumesite/actions/workflows/main.yml/badge.svg)
+
+
+[#### Certifications]: #  
 
 #### Socialization 
 
