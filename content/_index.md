@@ -27,7 +27,3 @@ This site was built using the [HUGO](http://gohugo.io) inspired by a [HUGO theme
 
 https://webbinaro.dev/
 
-
-#### New Heading
-
-Hello World!
